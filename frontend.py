@@ -36,7 +36,7 @@ with col1:
         </div>
     """, unsafe_allow_html=True)
     st.markdown(
-        '<a href="https://github.com/longway2go-ai/AI-Stock-Advisor-for-Beginner" target="_blank">'
+        '<a href="https://huggingface.co/spaces/ArnabDeo/ai-stock-predictor" target="_blank">'
         '<button style="background-color:#21618C;color:white;padding:10px 20px;border:none;border-radius:8px;font-size:16px;cursor:pointer;">Enter Beginner Mode</button>'
         '</a>',
         unsafe_allow_html=True
@@ -73,3 +73,4 @@ st.markdown("""
 # --------- FOOTER ---------
 st.markdown("---")
 st.caption("© 2025 Smart Stock Advisor | Powered by AI & Streamlit | 📍 US Markets Only")
+
