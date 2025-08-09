@@ -2,75 +2,215 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-    page_title="📊 Smart Stock Advisor - US Stocks",
+    page_title="🚀 AI Stock Prophet - Smart Investment Decisions",
     layout="wide",
     page_icon="💹"
 )
 
-# --------- HEADER SECTION ---------
-st.markdown("<h1 style='text-align: center; color: #2E86C1;'>📈 SMART STOCK ADVISOR </h1>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center; color: gray;'>US-Based Stock Price Analysis Powered by AI</h4>", unsafe_allow_html=True)
-st.markdown("---")
-
-# --------- INTRO SECTION ---------
+# Minimal CSS that actually works in Streamlit
 st.markdown("""
-<div style="background-color: #F2F3F4; padding: 20px; border-radius: 10px;">
-    <h3 style="color: #1A5276;">🧠 Ready to Predict the Market?</h3>
-    <p style="font-size: 16px; color: #34495E;">
-        Whether you're new to investing or a seasoned analyst, our AI-powered dashboard helps you make smarter investment decisions.
-        Choose your level to begin your journey with US-based stock predictions, visual analytics, and actionable insights.
-    </p>
+<style>
+    /* Simple, reliable styling */
+    .main-container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .mode-card {
+        background: white;
+        border: 2px solid #ddd;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .beginner-card { border-color: #27ae60; }
+    .expert-card { border-color: #e74c3c; }
+    
+    .btn {
+        background: #3498db;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px 0;
+    }
+    
+    .btn-green { background: #27ae60; }
+    .btn-red { background: #e74c3c; }
+    
+    .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+</style>
+""", unsafe_allow_html=True)
+
+# --------- HERO SECTION ---------
+st.markdown("""
+<div class="hero">
+    <h1>🚀 AI STOCK PROPHET</h1>
+    <h3>Unleash the Power of AI for Smarter Investment Decisions</h3>
+    <p>📊 Advanced Analytics • 🎯 Precise Predictions • 💡 Expert Insights</p>
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("### 🚀 Choose Your Experience Level")
+# --------- INTRO SECTION ---------
+st.markdown("## 🧠 Welcome to the Future of Stock Analysis")
 
-# --------- CHOICE BUTTONS ---------
+st.write("""
+Transform your investment strategy with our cutting-edge AI platform. Whether you're taking your first steps 
+in the stock market or you're a seasoned trader seeking advanced analytics, we've crafted the perfect 
+tools to elevate your decision-making process.
+""")
+
+# Feature highlights using native Streamlit
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.info("🎯 **AI-Powered Predictions**\n\nSmart analysis using advanced machine learning")
+with col2:
+    st.info("📈 **Visual Analytics**\n\nBeautiful charts and trend visualizations")  
+with col3:
+    st.info("⚡ **User-Friendly Interface**\n\nDesigned for both beginners and experts")
+
+st.markdown("---")
+
+# --------- CHOICE SECTION ---------
+st.markdown("## 🎪 Choose Your Experience Level")
+
 col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-        <div style="background-color: #D6EAF8; padding: 20px; border-radius: 10px;">
-            <h4 style="color: #21618C;">🟢 Beginner Mode</h4>
-            <p style="color: #1B2631;">For new investors who want clear, simple stock insights and easy predictions.</p>
+    <div class="mode-card beginner-card">
+        <h3 style="color: #27ae60;">🌱 BEGINNER MODE</h3>
+        <h4 style="color: #2c3e50;">Perfect for New Investors</h4>
+        <p style="color: #2c3e50;">Start your investment journey with confidence! Our beginner-friendly interface provides:</p>
+        <ul style="color: #2c3e50;">
+            <li>🎯 Simple buy/sell/hold recommendations</li>
+            <li>🤖 AI-powered predictions in plain English</li>
+            <li>💡 Educational tips and market insights</li>
+            <li>📱 Mobile-friendly, intuitive design</li>
+            <li>⚡ Quick analysis in under a minute</li>
+        </ul>
+        <div style="text-align: center;">
+            <a href="https://huggingface.co/spaces/ArnabDeo/ai-stock-predictor" target="_blank">
+                <button class="btn btn-green">🚀 Start Your Investment Journey</button>
+            </a>
         </div>
+    </div>
     """, unsafe_allow_html=True)
-    st.markdown(
-        '<a href="https://huggingface.co/spaces/ArnabDeo/ai-stock-predictor" target="_blank">'
-        '<button style="background-color:#21618C;color:white;padding:10px 20px;border:none;border-radius:8px;font-size:16px;cursor:pointer;">Enter Beginner Mode</button>'
-        '</a>',
-        unsafe_allow_html=True
-    )
 
 with col2:
     st.markdown("""
-        <div style="background-color: #D5F5E3; padding: 20px; border-radius: 10px;">
-            <h4 style="color: #117A65;">🔵 Expert Mode</h4>
-            <p style="color: #1B2631;">Dive deep into technical indicators, forecasting models, and customizable visualizations.</p>
+    <div class="mode-card expert-card">
+        <h3 style="color: #e74c3c;">⚡ EXPERT MODE</h3>
+        <h4 style="color: #2c3e50;">Advanced Analytics Hub</h4>
+        <p style="color: #2c3e50;">Dive deep with professional-grade analysis tools designed for serious traders:</p>
+        <ul style="color: #2c3e50;">
+            <li>📊 ARIMA & SARIMA statistical modeling</li>
+            <li>🔬 Comprehensive exploratory data analysis</li>
+            <li>📁 Custom dataset upload capabilities</li>
+            <li>🎯 Technical indicators & trading signals</li>
+            <li>💾 Downloadable professional reports</li>
+        </ul>
+        <div style="text-align: center;">
+            <a href="https://github.com/Sayan-ML/Time-Series-for-Experts" target="_blank">
+                <button class="btn btn-red">🔬 Enter the Expert Zone</button>
+            </a>
         </div>
+    </div>
     """, unsafe_allow_html=True)
-    st.markdown(
-        '<a href="https://github.com/Sayan-ML/Time-Series-for-Experts" target="_blank">'
-        '<button style="background-color:#117A65;color:white;padding:10px 20px;border:none;border-radius:8px;font-size:16px;cursor:pointer;">Enter Expert Mode</button>'
-        '</a>',
-        unsafe_allow_html=True
-    )
 
-# --------- TEASER PROMPT ---------
+# --------- COMPARISON TABLE ---------
+st.markdown("## 📋 Platform Comparison")
+
+# Using Streamlit's native table for better visibility
+import pandas as pd
+
+comparison_df = pd.DataFrame({
+    "Feature": [
+        "Learning Curve", "AI Predictions", "Statistical Models", 
+        "Custom Data Upload", "Visual Charts", "Analysis Time",
+        "Mobile Friendly", "Export Reports", "Best For"
+    ],
+    "🌱 Beginner Mode": [
+        "✅ Minimal", "✅ Yes", "❌ No", "❌ No", "✅ Interactive",
+        "⚡ ~30 seconds", "✅ Fully Responsive", "❌ No", "New Investors"
+    ],
+    "⚡ Expert Mode": [
+        "🔄 Moderate", "❌ No", "✅ ARIMA/SARIMA", "✅ Yes", "✅ Professional",
+        "⏱️ 2-5 minutes", "🔄 Desktop Optimized", "✅ PDF/CSV", "Traders & Analysts"
+    ]
+})
+
+st.table(comparison_df)
+
+# --------- TECHNOLOGY SECTION ---------
+st.markdown("## 🔮 Powered by Advanced Technology")
+
+st.write("**🚀 AI Models & Algorithms**")
+st.write("""
+Our platform leverages state-of-the-art machine learning models including Amazon Chronos and 
+Salesforce Moirai for time series forecasting, combined with traditional statistical methods 
+like ARIMA and SARIMA for comprehensive market analysis.
+""")
+
+st.write("**⚡ Real-Time Data Processing**")
+st.write("""
+Get instant analysis on US stocks with live data feeds from Yahoo Finance. Our systems 
+process historical trends, price patterns, and market indicators to provide you with 
+actionable investment insights.
+""")
+
+# --------- FEATURES SECTION ---------
+st.markdown("## 🛠️ What's Under the Hood")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("### 🤖 AI Technology")
+    st.write("• Amazon Chronos Models")
+    st.write("• Salesforce Moirai Framework")
+    st.write("• PyTorch & Transformers")
+    st.write("• Real-time Processing")
+
+with col2:
+    st.markdown("### 📊 Statistical Models")
+    st.write("• ARIMA Time Series")
+    st.write("• SARIMA Seasonal Analysis")
+    st.write("• Exponential Smoothing")
+    st.write("• Trend Decomposition")
+
+with col3:
+    st.markdown("### 🔧 Built With")
+    st.write("• Gradio & Streamlit")
+    st.write("• Plotly Visualizations")
+    st.write("• Yahoo Finance API")
+    st.write("• HuggingFace Spaces")
+
+# --------- CALL TO ACTION ---------
 st.markdown("---")
-st.markdown("""
-<div style="background-color: #FEF9E7; padding: 20px; border-radius: 10px;">
-    <h4 style="color: #B7950B;">🔮 Curious about tomorrow’s market?</h4>
-    <p style="color: #7D6608;">
-        Use our AI engine to predict whether your favorite stock will <strong>rise 📈 or fall 📉</strong> tomorrow based on historical trends, news sentiment, and technical signals.
-    </p>
-    <p style="color: #7D6608;">
-        Ready to try it out? Choose a mode above and start analyzing!
-    </p>
-</div>
-""", unsafe_allow_html=True)
+st.markdown("## 🎯 Ready to Start?")
+st.write("Choose your preferred experience level above and start analyzing stocks with AI!")
 
 # --------- FOOTER ---------
 st.markdown("---")
-st.caption("© 2025 Smart Stock Advisor | Powered by AI & Streamlit | 📍 US Markets Only")
+st.markdown("""
+**© 2025 AI Stock Prophet** | Powered by Advanced AI & Machine Learning
 
+⚠️ **Educational purposes only. Not financial advice. Always do your own research before investing.**
+""")
