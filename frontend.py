@@ -128,7 +128,7 @@ with col2:
             <li>💾 Downloadable professional reports</li>
         </ul>
         <div style="text-align: center;">
-            <a href="https://github.com/Sayan-ML/Time-Series-for-Experts" target="_blank">
+            <a href="https://time-series-for-experts.streamlit.app/" target="_blank">
                 <button class="btn btn-red">🔬 Enter the Expert Zone</button>
             </a>
         </div>
@@ -214,3 +214,4 @@ st.markdown("""
 
 ⚠️ **Educational purposes only. Not financial advice. Always do your own research before investing.**
 """)
+
