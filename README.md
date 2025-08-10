@@ -1,4 +1,4 @@
-# ⚡ Comprehensive AI Stock Predictor Suite
+# ⚡ 𝐀𝐈 𝐒𝐭𝐨𝐜𝐤 𝐏𝐫𝐨𝐩𝐡𝐞𝐭 - 𝐒𝐦𝐚𝐫𝐭 𝐈𝐧𝐯𝐞𝐬𝐭𝐦𝐞𝐧𝐭 𝐃𝐞𝐜𝐢𝐬𝐢𝐨𝐧𝐬 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦
 
 A complete AI-powered stock analysis platform featuring both **beginner-friendly** and **advanced statistical analysis** modes. Choose your experience level and get personalized stock market insights powered by cutting-edge AI and traditional statistical models.
 
