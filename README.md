@@ -13,7 +13,7 @@ A complete AI-powered stock analysis platform featuring both **beginner-friendly
 | Mode | Best For | Platform | Features | Link |
 |------|----------|----------|----------|------|
 | **🟢 Beginner** | New investors, Quick analysis | Gradio | AI predictions, Simple interface, Educational tips | **[Launch Beginner Mode →](https://huggingface.co/spaces/ArnabDeo/ai-stock-predictor)** |
-| **🔴 Advanced** | Experienced traders, Deep analysis | Streamlit | ARIMA/SARIMA, Custom data upload, Advanced EDA | **[Launch Advanced Mode →](https://time-series-for-experts-sayan.streamlit.app/)** |
+| **🔴 Expert** | Experienced traders, Deep analysis | Streamlit | ARIMA/SARIMA, Custom data upload, Advanced EDA | **[Launch Expert Mode →](https://time-series-for-experts-sayan.streamlit.app/)** |
 
 ## 🎭 Platform Overview
 
@@ -28,7 +28,7 @@ Perfect for newcomers to stock market analysis who want quick, AI-powered insigh
 - **📱 Mobile-friendly Interface**: Works on any device
 - **⚡ Fast Results**: Analysis completed in 30-60 seconds
 
-### 🔴 Advanced Mode (Streamlit Platform)
+### 🔴 Expert Mode (Streamlit Platform)
 Designed for experienced investors who need comprehensive statistical analysis.
 
 **Key Features:**
